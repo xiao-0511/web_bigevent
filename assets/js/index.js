@@ -1,6 +1,10 @@
+let userInfo = null;
+//调用获取用户信息的函数
+getUserInfo();
 $(function () {
-  //调用获取用户信息的函数
-  getUserInfo();
+  if (userInfo) {
+    renderAvatar(userInfo);
+  }
   let layer = layui.layer;
   $("#btnLogout").on("click", function () {
     layer.confirm("确定退出登录?", { icon: 3, title: "提示" }, function (
@@ -17,11 +21,12 @@ function getUserInfo() {
   $.ajax({
     type: "GET",
     url: "/my/userinfo",
+    async: false,
     success: function (res) {
       if (res.status !== 0) {
         return layui.layer.msg(res.message);
       }
-      renderAvatar(res.data);
+      userInfo = res.data;
     },
   });
 }

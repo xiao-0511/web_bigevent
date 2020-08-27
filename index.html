@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="/assets/fonts/iconfont.css" />
     <!-- 导入自己的样式表 -->
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <!-- 导入jQuery文件 -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 导入自己封装的baseAPI文件 -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- 导入自己的js文件 -->
+    <script src="/assets/js/index.js"></script>
   </head>
   <body class="layui-layout-body">
     <div class="layui-layout layui-layout-admin">
@@ -24,14 +31,14 @@
         <ul class="layui-nav layui-layout-right">
           <li class="layui-nav-item">
             <a href="javascript:;" class="userinfo">
-              <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+              <img src="" class="layui-nav-img" />
               <span class="text-avatar">A</span>
               个人中心
             </a>
             <dl class="layui-nav-child">
-              <dd><a href="javascript:;">基本资料</a></dd>
-              <dd><a href="javascript:;">更换头像</a></dd>
-              <dd><a href="javascript:;">重置密码</a></dd>
+              <dd><a href="/user/user_info.html" target="fm">基本资料</a></dd>
+              <dd><a href="/user/user_avatar.html" target="fm">更换头像</a></dd>
+              <dd><a href="/user/user_pwd.html" target="fm">重置密码</a></dd>
             </dl>
           </li>
           <li class="layui-nav-item">
@@ -45,7 +52,7 @@
       <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
           <div class="userinfo">
-            <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+            <img src="" class="layui-nav-img" />
             <span class="text-avatar">A</span>
             <span id="welcome">欢迎***</span>
           </div>
@@ -84,17 +91,17 @@
               >
               <dl class="layui-nav-child">
                 <dd>
-                  <a href="javascript:;"
+                  <a href="/user/user_info.html" target="fm"
                     ><i class="layui-icon layui-icon-app"></i>基本资料</a
                   >
                 </dd>
                 <dd>
-                  <a href="javascript:;"
+                  <a href="/user/user_avatar.html" target="fm"
                     ><i class="layui-icon layui-icon-app"></i>更换头像</a
                   >
                 </dd>
                 <dd>
-                  <a href="javascript:;"
+                  <a href="/user/user_pwd.html" target="fm"
                     ><i class="layui-icon layui-icon-app"></i>重置密码</a
                   >
                 </dd>
@@ -115,12 +122,5 @@
       </div>
     </div>
     <script src="./assets/lib/layui/layui.all.js"></script>
-    <!-- 导入jQuery文件 -->
-    <script src="/assets/lib/jquery.js"></script>
-    <!-- 导入自己封装的baseAPI文件 -->
-    <script src="/assets/js/baseAPI.js"></script>
-    <!-- 导入自己的js文件 -->
-    <script src="/assets/js/index.js"></script>
   </body>
 </html>
->
