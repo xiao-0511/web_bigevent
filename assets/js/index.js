@@ -27,6 +27,7 @@ function getUserInfo() {
         return layui.layer.msg(res.message);
       }
       userInfo = res.data;
+      renderAvatar(res.data);
     },
   });
 }
